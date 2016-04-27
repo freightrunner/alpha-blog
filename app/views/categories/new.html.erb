@@ -1,0 +1,13 @@
+<h2 align="center">Create New Category</h2>
+<%= render 'shared/errors', obj: @category %>
+
+<div class="container-fluid">
+	<%= form_for(@category, :html => {class: "form"})  do |f| %>
+		<div class="form-group">			
+			<%= f.label :name %>
+			<%= f.text_field :name, class: "form-control", placeholder: "Name of category", autofocus: true %>
+		</div>
+		<%= f.submit class: 'btn btn-primary btn-lg' %>
+	<% end %>
+	<%= link_to "Cancel", articles_path, class: "btn btn-primary btn-lg", id: "bottom-button" %>
+</div>
