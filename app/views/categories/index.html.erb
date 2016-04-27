@@ -1,5 +1,6 @@
 <h2 align="center">Categories</h2>
 <div class="container-fluid" align="center">
+	<%= will_paginate %>
 	<% @categories.each do |t| %>
 		<ul class="listing">
 			<div class="row">
@@ -11,4 +12,5 @@
 			</div>
 		</ul>
 	<% end %>
+	<%= will_paginate %>
 </div>
